@@ -30,6 +30,7 @@
     name: ondemand
     state: stopped
     enabled: no
+  when: ansible_facts.services["ondemand.service"] is defined
 
 - name: bounce service if necessary
   service:
